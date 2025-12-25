@@ -1,0 +1,16 @@
+﻿@using MyAcademy_MVC_CodeFirst.Data.Entities
+@model Category
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kategori Güncelle</h2>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id"/>
+    <label>Kategori Adı</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-dark">Güncelle</button>
+</form>
